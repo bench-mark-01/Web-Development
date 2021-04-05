@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoリスト</title>
+</head>
+<body>
+    <header>
+
+        <h1>
+            ToDoリスト
+        </h1>
+    </header>
+    <section>
+        <div>
+            <input type="radio" name="todoType" checked><label for="all">すべて</label>
+            <input type="radio" name="todoType"><label for="dewey">作業中</label>
+            <input type="radio" name="todoType"><label for="dewey">削除</label>
+        </div>
+        <table id="innertxt">
+            <tr >
+                <td><b>ID</b></td>
+                <td><b>コメント</b></td>
+                <td><b>状態</b></td>
+            </tr>
+           
+        </table>
+    </section>
+    <section>
+        <h2>
+            新規タスクの追加
+        </h2>
+        <input type="text" id="task">
+        <input type="submit" value="追加" id="submit">    
+    </section>
+</body>
+<script src="script.js"></script>
+</html>
