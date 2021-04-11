@@ -48,13 +48,14 @@
             }
 
             //作業中ボタンの生成
-            function createWorkingBtn(){
+            function createWorkingBtn(i){
                 const workingBtnTd = document.createElement("td");
                 const workingBtn = document.createElement('input');
                 workingBtn.type = 'button';
-                workingBtn.value = '作業中';
-                workingBtn.id = 'working';
+                workingBtn.value = todoArray[i].status;
+                workingBtn.id = i;
                 workingBtnTd.appendChild(workingBtn);
+                workingBtn.addEventListener('click', changeStatus, false);
                 return workingBtnTd
             }
 
@@ -89,6 +90,18 @@
                 refleshDisplay();
             }
             
+            //todoArrayのstatusを変更、更新
+            function changeStatus(){
+                if(this.value === '作業中'){
+                    let change = todoArray[this.id];
+                    change.status = '完了'
+                }else{
+                    let change = todoArray[this.id];
+                    change.status = '作業中'
+                }
+                refleshDisplay();
+            };
+
             refleshDisplay();
         });
     });
