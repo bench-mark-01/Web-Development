@@ -29,16 +29,15 @@
 
             //Htmlを生成
             function createHtml(now){
-                let i = 0;
-                todoArray.forEach(element => {
 
+                todoArray.forEach(element => {
                     if (now === 'all'){
                         let idTr = document.createElement("tr");
                         let idTd = document.createElement("td");
                         let commentTd = document.createElement("td");
                         idTr.appendChild(idTd);
                         idTr.appendChild(commentTd);
-                        idTd.textContent = i;
+                        idTd.textContent = element.index;
                         commentTd.textContent = element.comment;
                         let createWorking = createWorkingBtn(element.index, element.status);
                         let createDelete = createDeleteBtn(element.index);
@@ -59,7 +58,7 @@
                             let commentTd = document.createElement("td");
                             idTr.appendChild(idTd);
                             idTr.appendChild(commentTd);
-                            idTd.textContent = i;
+                            idTd.textContent = element.index;
                             commentTd.textContent = element.comment;
                             let createWorking = createWorkingBtn(element.index, element.status);
                             let createDelete = createDeleteBtn(element.index);
@@ -82,7 +81,7 @@
                             let commentTd = document.createElement("td");
                             idTr.appendChild(idTd);
                             idTr.appendChild(commentTd);
-                            idTd.textContent = i;
+                            idTd.textContent = element.index;
                             commentTd.textContent = element.comment;
                             let createWorking = createWorkingBtn(element.index, element.status);
                             let createDelete = createDeleteBtn(element.index);
