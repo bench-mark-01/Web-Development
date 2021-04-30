@@ -46,7 +46,6 @@
                         idTr.appendChild(createWorking, null);
                         idTr.appendChild(createDelete.deleteBtnTd, null);
                         todoDisplay.push(idTr);
-                        i++;
                     }
 
                     else if (now === 'working'){
@@ -67,8 +66,6 @@
                             idTr.appendChild(createWorking, null);
                             idTr.appendChild(createDelete.deleteBtnTd, null);
                             todoDisplay.push(idTr);
-                            i++;
-
                         }
     
                     }
@@ -90,7 +87,6 @@
                             idTr.appendChild(createWorking, null);
                             idTr.appendChild(createDelete.deleteBtnTd, null);
                             todoDisplay.push(idTr);
-                            i++;
                         }
                     }
                     
