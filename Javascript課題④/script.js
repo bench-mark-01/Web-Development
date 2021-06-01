@@ -44,11 +44,15 @@
         info.textContent = '少々お待ちください';
         submit.remove();
 
-        const response = await fetch('https://opentdb.com/api.php?amount=10');
+        const response = await fetch('https://opentdb.com/api.php?amount=10')
+        .catch(error => {
+            console.error('エラーが発生しました', error);
+            info.textContent = 'エラーが発生しました:' + error;
+        });
+        
         const json = await response.json();
         const instance = new Quiz(json);
-        console.log(instance);
-        
+ 
         createQuiz(instance);
     }
 
