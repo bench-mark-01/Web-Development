@@ -1,10 +1,10 @@
 'use strict';
 {   
-    let header = document.getElementById('header');
-    let info = document.getElementById('info');
-    let submit = document.getElementById('submit');
+    const header = document.getElementById('header');
+    const info = document.getElementById('info');
+    const submit = document.getElementById('submit');
     submit.addEventListener('click', fetchQuestion, false);
-    let ans = document.getElementById('answer');
+    const ans = document.getElementById('answer');
     let index = 0 ;
 
     class Quiz{
@@ -54,11 +54,11 @@
 
     const createQuiz = (instance) => {
         header.textContent = '問題' ;
-        let category = document.createElement('p');
+        const category = document.createElement('p');
         category.textContent = '[ジャンル]' + instance.getCategory();
-        let difficulty = document.createElement('p');
+        const difficulty = document.createElement('p');
         difficulty.textContent = '[難易度]' + instance.getDifficulty();
-        let container = document.createElement('div');
+        const container = document.createElement('div');
         container.appendChild(category);
         container.appendChild(difficulty);
         header.after(container);
@@ -67,8 +67,8 @@
         const answers = setAnswers(instance);
 
         answers.forEach((answer) => {
-            let answerList = document.createElement('li');
-            let btn = document.createElement('button');
+            const answerList = document.createElement('li');
+            const btn = document.createElement('button');
             btn.textContent = answer;
             answerList.style.listStyle = 'none';
 
@@ -87,8 +87,8 @@
     const result = (instance) => {
         header.textContent = 'あなたの正当数は' + instance.getAnswerResult() + 'です！';
         info.textContent = '再度チャレンジしたい場合は以下をクリック';
-        let home = document.createElement('li');
-        let btn = document.createElement('button');
+        const home = document.createElement('li');
+        const btn = document.createElement('button');
         btn.textContent = 'ホームに戻る';
         home.style.listStyle = 'none';
 
